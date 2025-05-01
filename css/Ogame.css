@@ -1,3 +1,4 @@
+html,
 body {
     margin: 0px;
     padding: 0px;
@@ -10,7 +11,7 @@ body {
 
     background-color: #0f0f0f;
     color: #d0d0d0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron', monospace;
     padding: 40px;
 
     scroll-behavior: smooth;
