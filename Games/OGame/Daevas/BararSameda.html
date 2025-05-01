@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../css/Ogame.css">
+    <title>Codex Dunamis Imperia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="imageModal">
+        <span id="closeModal" onclick="closeModal()">&times;</span>
+        <img name="toMod" id="modalImage" src="" alt="Img Zoom">
+    </div>
+
+    <a href="../../../Ogame.html">
+        <h1 class="legend title">Dunamis Imperium</h1>
+    </a>
+    <details>
+        <summary>
+            <h1 class="title">Nomen Daevarum - Barar Sameda</h1>
+        </summary>
+        <div class="legend title">
+            <h2>Barar Sameda — Fondatrice Suprême</h2>
+            <div class="flexerino">
+
+                <div>
+                    <div>
+                        <a target="_blank"
+                            href="https://s270-fr.ogame.gameforge.com/game/index.php?page=ingame&component=playerprofile&profileId=103543">
+                            <img name="toMod" src="../../../img/ogame/codex/barar/Barar Sameda.png"
+                                alt="Barar Sameda pilote" class="portrait">
+                        </a>
+                    </div>
+                    <div>
+                        <caption>Avatar InGame</caption>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flexerinob">
+                <div class="borderino">
+                    <div>
+                        <div>
+                            <img name="toMod" src="../../../img/ogame/codex/barar/solun.png" alt="Solun voye Sameda"
+                                class="portrait">
+                        </div>
+                        <div>
+                            <caption>«→ Le Soleil a envoyé Sameda.»</caption>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Ancienne pilote prodige des Loryas, Barar Sameda a vu son monde natal, Zanmi-Lorya, sombrer dans
+                        les flammes. Ce jour-là, l’enfant devint guerrière. Elle surpassa tous les records de pilotage
+                        de
+                        l’Académie Loryenne avant de se retirer, non vaincue, mais éveillée. Car au-delà des dogfights
+                        et des
+                        médailles, une vérité plus vaste l’appelait : unifier les siens, forger l’Imperium.
+                    </p>
+                </div>
+                <div class="borderino">
+                    <img name="toMod" src="../../../img/ogame/codex/barar/violonce.png" alt="Barar Sameda résolue"
+                        class="portrait">
+                    <p>
+                        Ce moment de résolution est devenu légende : debout sur les ruines, le vent dans les cheveux,
+                        elle
+                        tourna le regard vers ce qu’elle laisserait derrière. Ce fut le début de l’ordre galactique. Le
+                        silence
+                        précéda sa phrase, inscrite depuis dans tous les halls militaires du Dunamis :
+                    </p>
+                    <p style="font-style: italic; text-align: center; color: #4ecdc4;">
+                        « Si la violence ne résout pas ton problème, c’est que tu ne frappes pas assez fort. »
+                    </p>
+                </div>
+                <div class="borderino">
+                    <img name="toMod" src="../../../img/ogame/codex/barar/Solun2.png" alt="Barar légendaire"
+                        class="portrait">
+                    <p>
+                        Aujourd’hui, son nom est murmuré dans les plus hautes sphères. Barar Sameda n’est plus seulement
+                        une
+                        fondatrice — elle est devenue le souffle de l’Imperium. Une idée. Un souvenir vivant que le vide
+                        n’a
+                        jamais pu avaler.
+                    </p>
+                    <p>
+                        Née sur Zanmi-Lorya, joyau pacifique des systèmes Loryens, Barar grandit dans l’harmonie. Mais à
+                        13 cycles,
+                        sa planète fut anéantie lors d’un raid interstellaire. Orpheline, elle s’enrôla dans la flotte
+                        Loryenne.
+                        Elle devint rapidement une légende parmi les pilotes, battant tous les records de l’académie.
+                        Mais malgré
+                        les victoires, elle pressentit que la guerre seule ne sauverait pas la galaxie. Elle posa alors
+                        son casque,
+                        et s’éleva sur la scène politique. C’est de cette transition que naquit le Dunamis Imperium.
+                        Barar, pilote
+                        devenue stratège, porte aujourd’hui le fardeau de l’ordre galactique sur ses épaules. Elle est
+                        l’origine,
+                        la volonté, et la lame.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </details>
+    <script>
+        // Modal image viewer
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const portraits = document.getElementsByName('toMod');
+
+        portraits.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+            });
+        });
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

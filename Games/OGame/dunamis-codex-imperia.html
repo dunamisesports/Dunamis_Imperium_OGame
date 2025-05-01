@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/Ogame.css">
+    <title>Codex Dunamis Imperia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="imageModal">
+        <span id="closeModal" onclick="closeModal()">&times;</span>
+        <img name="toMod" id="modalImage" src="" alt="Img Zoom">
+    </div>
+
+    <a href="../../Ogame.html">
+        <h2 class="legend title">Dunamis Imperium</h2>
+    </a>
+
+    <h1>DUNAMIS CODEX IMPERIA</h1>
+
+    <details>
+        <summary>
+            <h1 class="title">Dunamea Strategicon</h1>
+        </summary>
+        <div class="legend title">
+            📘 Dunamea Strategicon <br>
+            « L’esprit tactique de l’Imperium cristallisé dans l’encre et la mémoire. »<br>
+            Recueil sacré des doctrines militaires, stratagèmes stellaires et protocoles de rétribution impériale.
+            Rédigé sous l’autorité du Konclave,<br>
+            le Strategicon n’est pas un simple manuel… C’est une vision gravée dans le néant.
+        </div>
+        <div class="legend title">
+            <h2>RANKS & Stratagems (A faire Validé par le Konclave) </h2>
+            <div class="flexerino">
+                <table>
+                    <thead>
+                        <th>GRADE 🔰</th>
+                        <th>Stratagem 🎯</th>
+                        <th>Explication 🛠️</th>
+                        <th>Launch Validation 🚩🚩</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Centurion (et au dessus)</td>
+                            <td>Planète Covering</td>
+                            <td> Un ou des membres de l'alliance envoi leur flotte <br> sur la planète en besoin pour le
+                                temps demandé</td>
+                            <td>Commander Macarius</td>
+                        </tr>
+                        <tr>
+                            <td>Praedivina Imperia (et au dessus) </td>
+                            <td>Missile Strike</td>
+                            <td>Tout les membres de l'alliance à portée envoi le nombre <br> de missile interplanétaire
+                                sur
+                                X:X:X</td>
+                            <td>JOBBO</td>
+                        </tr>
+                        <tr>
+                            <td>Praedivina Imperia (et au dessus) </td>
+                            <td>Assistance Espionnage</td>
+                            <td> Un ou des membres de l'alliance <br> envoi leur flotte de sonde sur
+                                X:X:X</td>
+                            <td>JOBBO</td>
+                        </tr>
+                        <tr>
+                            <td>Divina Imperia (et au dessus)</td>
+                            <td>Vitrification</td>
+                            <td>Tout les membres de l'alliance envoi la <br> moitié ou toute leur flotte sur X:X:X</td>
+                            <td>Barar Sameda</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="legend flexerino">
+            <details open>
+                <summary>⚔️ Doctrine Tactique : Chaîne de Frappe DUNAMIS</summary>
+                <div class="flexerino">
+                    <div class="carousel">
+                        <div class="carousel-images" id="carouselImages">
+                            <img width="25%" id="carouselImage" class="carousel-image" src="" alt="Slide">
+
+                        </div>
+                        <div class="controls">
+                            <button onclick="prevSlide()">⟨</button>
+                            <button onclick="nextSlide()">⟩</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="step-title" id="stepTitle">FIND</div>
+                <div class="step-desc" id="stepDesc">Identifier les cibles prioritaires par des opérations de
+                    renseignement et d'observation.</div>
+            </details>
+        </div>
+
+    </details>
+    <details>
+        <summary>
+            <h1 class="title">Nomen Daevarum</h1>
+        </summary>
+        <div class="flexerino">
+            <div class="flexerino">
+                <div
+                    style="background-color: #0a0a0a; color: #4ecdc4; font-family: 'Orbitron', sans-serif; padding: 20px; border: 1px solid #4ecdc4; border-radius: 10px; text-align: center;">
+                    <img name="toMod" width="20%" src="../../img/ogame/beade.jpg" alt="Become a Daeva ">
+                    <h2 style="color: #ffffff; font-size: 1.8em; margin-bottom: 10px;">✦ Le Daeva ✦</h2>
+                    <p style="font-style: italic; font-size: 1.1em; margin-bottom: 20px;">
+                        « Le Daeva est un flambeau vivant de la volonté impériale, un éclat de puissance guidé par le
+                        Devoir et la Mémoire. »
+                    </p>
+
+                    <p><strong>Un Daeva</strong> est un guerrier-étoile ayant transcendé le rang de simple soldat par
+                        ses <em>actes</em>, sa <em>loyauté</em> et sa <em>résilience</em>. <br> Il incarne la doctrine
+                        du
+                        <strong>Dunamea</strong>, inspire ses pairs et grave son nom dans les archives sacrées du
+                        <strong>Nomen Daevarum</strong>.
+                    </p>
+
+                    <h3 style="margin-top: 20px; font-size: 1.4em;">Traits du Daeva :</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>✦ <strong>Porteur du Devoir</strong> — agit pour l’unité de l’Imperium</li>
+                        <li>✦ <strong>Gardien de la Mémoire</strong> — honore les batailles et les sacrifices</li>
+                        <li>✦ <strong>Instrument de la Volonté</strong> — exécute le <em>Strategicon</em> sans faille
+                        </li>
+                        <li>✦ <strong>Résonance de la Flamme</strong> — brûle de lumière propre, mais commune</li>
+                    </ul>
+
+                    <p style="margin-top: 20px; font-size: 1.1em;"><em>Un Daeva n’est pas élu. Il devient. Par le feu,
+                            par l’ombre, par la dévotion.</em></p>
+                </div>
+
+            </div>
+
+        </div>
+        <hr>
+        <div class="flexerino">
+            <div class="legend title">
+                <h2>Barar Sameda — Fondatrice Suprême</h2>
+                <div class="flexerino">
+
+                    <div>
+                        <div>
+                            <a target="_blank" href="./Daevas/BararSameda.html">
+                                <img name="toMod" src="../../img/ogame/codex/barar/bararYoung.webp"
+                                    alt="Barar Sameda pilote" class="portrait">
+                            </a>
+                        </div>
+                        <div>
+                            <caption>Avatar InGame</caption>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="legend title">
+                <h2>Commander Macarius — (Coming Soon)</h2>
+                <div class="flexerino">
+
+                    <div>
+                        <div>
+                            <a target="_blank"
+                                href="https://s270-fr.ogame.gameforge.com/game/index.php?page=ingame&component=playerprofile&profileId=103666">
+                                <img name="toMod" src="../../img/ogame/codex/Commander Macarius/cm.webp"
+                                    alt="Commander Macarius" class="portrait">
+                            </a>
+                        </div>
+                        <div>
+                            <caption>Avatar InGame</caption>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </details>
+    <details>
+        <summary>
+            <h1>Memoria Concordae</h1>
+        </summary>
+        <div class="flexerino">
+            <a href="#LastEntry" id="FirstEntry" class="buttonN">Go To Last Entry</a>
+        </div>
+        <div class="legend title">
+            <div class="flexerino">
+                <div class=" entries">
+                    <h3>Entry #1</h3>
+                    <hr>
+                    <p>
+                        Debut des differents comptes autour du 20/03/25
+                    </p>
+                </div>
+            </div>
+            <div class="flexerino">
+                <div class=" entries">
+                    <h3>Entry #2</h3>
+                    <hr>
+                    <p>
+                        Création de l'alliance 20.03.2025
+                    </p>
+                    <div>
+                        <img src="../../img/ogame/codex/alli.png" width="50%" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flexerino">
+                <div class=" entries">
+                    <h3>Entry #3</h3>
+                    <hr>
+                    <p>
+                        KIN LAND En état de Hors la loi => Conséquence inconnu
+                    </p>
+                </div>
+            </div>
+            <div class="flexerino">
+                <div class=" entries">
+                    <h3>Entry #4</h3>
+                    Mission de Stationnement envoyer Par Linareythen & Commander Macarius + Envoi de Fret
+                    <hr>
+                </div>
+            </div>
+            <div class="flexerino">
+                <div class=" entries">
+                    <h3>Entry #5</h3>
+                    <div class="flexerino">
+                        <div>
+                            Premier rapport de Combat associé à KIN LAND
+                        </div>
+                        <div>
+                            <img name="toMod" src="../../img/ogame/1.jpg" alt="" width="50%">
+                        </div>
+                    </div>
+                    <div>
+                        Rapport complet d'espionnage sur EkinoX
+                    </div>
+                    <div class="flexerino">
+
+                        <div>
+                            <img name="toMod" src="../../img/ogame/eki/2.jpg" alt="" width="24%">
+                            <img name="toMod" src="../../img/ogame/eki/3.jpg" alt="" width="24%">
+                            <img name="toMod" src="../../img/ogame/eki/4.jpg" alt="" width="24%">
+                            <img name="toMod" src="../../img/ogame/eki/5.jpg" alt="" width="24%">
+
+                        </div>
+
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="flexerino">
+                <div class="entries">
+                    <h3>Entry #6</h3>
+                    <div>
+                        Attaque de Représaille sur EkinoX
+                    </div>
+
+                    <div class="flexerino">
+
+                        <div>
+                            <img name="toMod" src="../../img/ogame/codex/represaille eki.png" alt="" width="60%">
+                        </div>
+                        <div>
+                            <img name="toMod" src="../../img/ogame/eki/reki.png" alt="" width="100%">
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="flexerino">
+                <div class="entries">
+                    <h3>Entry #7</h3>
+                    <div>
+                        La Défaite de Namn-Lorya
+                    </div>
+                    <div>
+                        <img name="toMod" src="../../img/ogame/codex/lddn.png" alt="" width="25%">
+                        <img name="toMod" src="../../img/ogame/codex/vulcan.jpg" alt="" width="25%">
+                    </div>
+                    <div>
+                        <div style="text-align: justify;">
+                            Courrier groupé de <br>
+                            Barar Sameda<br>
+                            De:<br>
+                            Barar Sameda<br>
+                            13.04.2025 23:11:29<br><br>
+                            <hr>
+
+                            🛰️ Transmission Interne — Ordre de Prévention Galactique<br>
+                            <br>
+                            Émis par le Konclave du Dunamis Imperium<br>
+                            <br>
+                            📅 Stardate 13.04.2025<br>
+                            <br>
+                            📍 Canal Prioritaire<br>
+
+                            <hr>
+
+                            🔐 Protocole de Prévention — Actif dès réception<br>
+                            <br>
+                            Retrait Tactique : Activé par défaut<br>
+                            Vérifiez que votre flotte de combat se retire si vos défenses sont faibles.<br>
+                            <br>
+                            Aucune défense = retrait actif = sécurité.<br>
+                            <br>
+
+                            Flottes civiles : Jamais à quai
+                            <ul>
+                                <li>
+                                    Grand transporteurs, sondes et recycleurs doivent être en mission ou stationnés
+                                    ailleurs.
+                                </li>
+                                <li>
+                                    Idéal : ghost sur débris + mission retour longue.
+                                </li>
+                            </ul>
+
+                            Ressources : En mouvement constant
+                            <ul>
+                                <li>
+                                    N'accumulez jamais de ressources visibles à quai.
+                                </li>
+                                <li>
+                                    Constructions en boucle ou transfert vers planète secondaire.
+                                </li>
+                            </ul>
+
+                            Alertes et scans : Remontez toute activité suspecte
+                            <ul>
+                                <li>
+                                    Un scan reçu ? Un pseudo rouge autour de vous ? Signalez-le.
+                                </li>
+                                <li>
+                                    Un canal stratégique sera mis en place pour cela.
+                                </li>
+                            </ul>
+                            <hr>
+
+                            Pour l’Imperium. Pour l’unité. Pour la destinée. <br>
+
+
+
+                            🜂 Dunamis Imperium 🜂
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div class="flexerino">
+                <div class="entries">
+                    <h3>Entry #8</h3>
+                    <div>
+                        New Recruits - LoulouOfficial | Badou | Caligula
+                    </div>
+                    <hr>
+                    <div>
+                        <img name="toMod" src="../../img/ogame/codex/recruits.png" alt="recruits" width="65%">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="flexerino">
+                <div class="entries">
+                    <h3>Entry #9</h3>
+                    <div>
+                        Les Représailles sur jbkun de Memoluze 2:257:4
+                    </div>
+                    <hr>
+                    <div>
+                        <img name="toMod" src="../../img/ogame/codex/jkbunatt.png" alt="recruits" width="45%">
+                        <img name="toMod" src="../../img/ogame/codex/jkbun.png" alt="recruits" width="45%">
+                    </div>
+                </div>
+            </div>
+            <div class="flexerino">
+                <a href="#FirstEntry" id="LastEntry" class="buttonN">Go To First Entry</a>
+            </div>
+        </div>
+        </div>
+        </div>
+    </details>
+    <script>
+        // Modal image viewer
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const portraits = document.getElementsByName('toMod');
+
+        portraits.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+            });
+        });
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        const slides = [
+            {
+                title: "FIND",
+                desc: "Identifier les cibles prioritaires par des opérations de renseignement et d'observation.",
+                img: "../../img/ogame/codex/killchain/find.png"
+            },
+            {
+                title: "FIX",
+                desc: "Fixer la cible dans l’espace et le temps pour la rendre vulnérable à une frappe.",
+                img: "../../img/ogame/codex/killchain/fix.png"
+            },
+            {
+                title: "TARGET",
+                desc: "Désigner la cible et planifier la frappe avec précision tactique.",
+                img: "../../img/ogame/codex/killchain/target.png"
+            },
+            {
+                title: "ENGAGE",
+                desc: "Exécuter l’attaque selon les doctrines impériales, avec une force décisive.",
+                img: "../../img/ogame/codex/killchain/engage.png"
+            },
+            {
+                title: "ASSESS",
+                desc: "Évaluer les dégâts et adapter les opérations futures. Aucun survivant inutile.",
+                img: "../../img/ogame/codex/killchain/assess.png"
+            }
+        ];
+
+        let index = 0;
+        const imgEl = document.getElementById('carouselImage');
+        const titleEl = document.getElementById('stepTitle');
+        const descEl = document.getElementById('stepDesc');
+
+        function showSlide(i) {
+            const slide = slides[i];
+            imgEl.src = slide.img;
+            titleEl.textContent = slide.title;
+            descEl.textContent = slide.desc;
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        }
+
+        // Initial load
+        showSlide(index);
+    </script>
+</body>
+
+</html>

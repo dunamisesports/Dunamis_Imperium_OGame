@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OGame Military Tracker</title>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #4ecdc4;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        #log {
+            border: 1px solid #4ecdc4;
+            padding: 20px;
+            max-height: 400px;
+            overflow-y: scroll;
+            background-color: #1a1c20;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Military Points Tracker</h1>
+    <p>Copie/colle ici les points militaires d'un joueur à surveiller</p>
+    <input id="playerName" type="text" placeholder="Nom du joueur">
+    <input id="pointsInput" type="number" placeholder="Points actuels">
+    <button onclick="logPoints()">Log</button>
+    <button onclick="resetLog()">Reset</button>
+    <button onclick="snapshotPrompt()">📸 Snapshot auto</button>
+    <button onclick="exportJSON()">📤 Export JSON</button>
+
+    <div id="log"></div>
+
+    <script>
+        const logDiv = document.getElementById('log');
+        const STORAGE_KEY = 'militaryTrackerLogs';
+
+        let logs = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        let lastPoints = {};
+
+        function renderLogs() {
+            logDiv.innerHTML = '';
+            logs.slice().reverse().forEach(entry => {
+                const p = document.createElement('p');
+                p.textContent = `${entry.time} — ${entry.name} — ${entry.points}${entry.diff}`;
+                logDiv.appendChild(p);
+            });
+        }
+
+        function saveLogs() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(logs));
+        }
+
+        function logPoints() {
+            const input = document.getElementById('pointsInput');
+            const nameInput = document.getElementById('playerName');
+            const value = parseInt(input.value);
+            const name = nameInput.value.trim();
+            const now = new Date().toLocaleTimeString();
+
+            if (!isNaN(value) && name !== '') {
+                let diffText = '';
+                if (lastPoints[name] !== undefined) {
+                    const diff = value - lastPoints[name];
+                    diffText = ` (${diff > 0 ? '+' : ''}${diff})`;
+                }
+                lastPoints[name] = value;
+
+                logs.push({ time: now, name, points: value, diff: diffText });
+                saveLogs();
+                renderLogs();
+                input.value = '';
+            }
+        }
+
+        function resetLog() {
+            if (confirm("Réinitialiser l'historique ?")) {
+                logs = [];
+                lastPoints = {};
+                saveLogs();
+                renderLogs();
+            }
+        }
+
+        function snapshotPrompt() {
+            const name = prompt("Nom du joueur :");
+            const points = prompt("Points militaires actuels :");
+            if (name && !isNaN(points)) {
+                document.getElementById('playerName').value = name;
+                document.getElementById('pointsInput').value = points;
+                logPoints();
+            }
+        }
+
+        function exportJSON() {
+            const data = JSON.stringify(logs, null, 2);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'military_logs.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        renderLogs();
+    </script>
+</body>
+
+</html>

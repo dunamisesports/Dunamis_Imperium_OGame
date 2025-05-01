@@ -1,0 +1,242 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../img/logot.png");
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-color: #0f0f0f;
+    color: #d0d0d0;
+    font-family: 'Orbitron', sans-serif;
+    padding: 40px;
+
+    scroll-behavior: smooth;
+}
+
+/*********Stratagems********/
+tr {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table,
+th,
+td {
+    padding: 10px;
+
+    border-collapse: separate !important;
+    border-radius: 8px;
+}
+
+th,
+td {
+    border: 4px solid rgb(36, 80, 109);
+    background-color: #424242;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*****************/
+.buttonN {
+    border-radius: 8px;
+    background-color: #276965;
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 2px 2px 2px rgb(58, 58, 58);
+    margin-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.band {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: wheat;
+    color: black;
+    font-size: 34;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+
+.entry {
+    width: 60%;
+}
+
+h1 {
+    color: #4ecdc4;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #4ecdc4;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.legend {
+    background: linear-gradient(145deg, #2c2f36, #1a1c20);
+    border: 1px solid #4ecdc4;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 12px rgba(78, 205, 196, 0.25);
+}
+
+.legend h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.video-mask {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.legend p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.portrait {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid #4ecdc4;
+    box-shadow: 0 0 6px rgba(78, 205, 196, 0.5);
+}
+
+.entries {
+    width: 68%;
+    border: 3px solid rgb(110, 110, 110);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgb(20, 144, 153);
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.flexerino {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexerinob {
+    display: flex;
+    justify-content: space-between;
+}
+
+.borderino {
+    width: 32%;
+    border: 3px solid rgb(5, 160, 165);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgb(114, 113, 113);
+    padding: 20px;
+    margin: 20px;
+    text-wrap: wrap;
+}
+
+/* Modal Styles */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#imageModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+#closeModal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #4ecdc4;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 10px #4ecdc4;
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+#closeModal:hover {
+    color: #ff4c4c;
+    text-shadow: 0 0 20px #ff4c4c;
+}
+
+/*****CARROUSSEL**/
+.carousel {
+    width: 25%;
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #00fff2;
+    border-radius: 12px;
+}
+
+.carousel-image {
+    width: 100%;
+
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.step-title {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.step-desc {
+    font-size: 1em;
+    max-width: 80%;
+    margin: 0 auto 40px;
+    color: #ccc;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.controls button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+}
