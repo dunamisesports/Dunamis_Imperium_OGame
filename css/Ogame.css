@@ -241,3 +241,8 @@ h2 {
     padding: 10px;
     cursor: pointer;
 }
+
+/***********************/
+.diaalogL {
+    border-left: 5px solid #4ecdc4;
+}
